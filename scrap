@@ -1,0 +1,9 @@
+
+// Gets any user based on graph match by facebook.
+// api.getUserID("abcd", function(err, data) {
+//     if(err) return callback(err);
+//
+//     // Send the message to the best match (best by Facebook's criteria)
+//     var threadID = data[0].userID;
+//     api.sendMessage("Happy Birthday", threadID);
+// });
