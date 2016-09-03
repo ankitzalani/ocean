@@ -25,10 +25,10 @@ login({
                 api.markAsRead(event.threadID, function(err) {
                     if (err) console.log(err);
                 });
-		var msg = intelligence(event,api);
-		if(msg && msg.length > 0) {
-                	api.sendMessage(msg, event.threadID);
-		}
+                var msg = intelligence(event, api);
+                if (msg && msg.length > 0) {
+                    api.sendMessage(msg, event.threadID);
+                }
                 break;
             case "event":
                 console.log(event);
@@ -40,17 +40,17 @@ login({
 function intelligence(event, api) {
     var msg = event.body;
     var target = "";
-    if(msg) {
-	    for (var i = 0; i < msg.length; i++) {
-        	target += i % 2 == 0 ? msg[i].toUpperCase() : msg[i];
-    		}
-	}
+    if (msg) {
+        for (var i = 0; i < msg.length; i++) {
+            target += i % 2 == 0 ? msg[i].toUpperCase() : msg[i];
+        }
+    }
     return target;
 }
 
 
-
-// api.getUserID("Ankit Zalani", function(err, data) {
+// Gets any user based on graph match by facebook.
+// api.getUserID("abcd", function(err, data) {
 //     if(err) return callback(err);
 //
 //     // Send the message to the best match (best by Facebook's criteria)

@@ -12,11 +12,11 @@
   "dependencies": {
     "ejs": "2.4.1",
     "express": "4.13.3",
-    "facebook-chat-api": "1.2.0" 
+    "facebook-chat-api": "1.2.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "https://github.com/ankitzalani/ocean"
   },
   "keywords": [
     "node",
