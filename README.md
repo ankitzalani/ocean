@@ -1,2 +1,2 @@
 An intelligent chat bot.
-Currently only supports facebook.
+Currently only supports facebook chat.
