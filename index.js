@@ -25,7 +25,10 @@ login({
                 api.markAsRead(event.threadID, function(err) {
                     if (err) console.log(err);
                 });
-                api.sendMessage(intelligence(event, api), event.threadID);
+		var msg = intelligence(event,api);
+		if(msg && msg.length > 0) {
+                	api.sendMessage(msg, event.threadID);
+		}
                 break;
             case "event":
                 console.log(event);
@@ -37,9 +40,11 @@ login({
 function intelligence(event, api) {
     var msg = event.body;
     var target = "";
-    for (var i = 0; i < msg.length; i++) {
-        target += i % 2 == 0 ? msg[i].toUpperCase() : msg[i];
-    }
+    if(msg) {
+	    for (var i = 0; i < msg.length; i++) {
+        	target += i % 2 == 0 ? msg[i].toUpperCase() : msg[i];
+    		}
+	}
     return target;
 }
 
