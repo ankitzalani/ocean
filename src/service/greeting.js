@@ -4,7 +4,8 @@ var mathUtil = require("../util/mathUtil.js");
 exports.greet = function(msg, callback, fallback) {
     var truthTable = [
         ["Thanks", ["Welcome","My Pleasure :)"]],
-        ["Bye", ["Bye", "Fir milenge haste haste","Have a nice day. :)", "Keep smiling :)"]]
+        ["Bye", ["Bye", "Fir milenge haste haste","Have a nice day. :)", "Keep smiling :)"]],
+        ["r u there", ["Yes, tell me"]],
     ];
 
     var status = false;
